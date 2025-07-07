@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+
+% ====== PACKAGES ======
+\usepackage{booktabs}      % Professio--l looking tables
+\usepackage{longtable}     % Long tables across pages
+\usepackage{geometry}      % Page margins
+\usepackage{caption}       % Custom caption formatting
+\usepackage{pdflscape}     % Landscape pages if needed
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage[table,xcdraw]{xcolor}
+
+
+% ====== PAGE GEOMETRY ======
+\geometry{
+  left=1in, right=1in,
+  top=1in, bottom=1in
+}
+
+% ====== COLORS ======
+\definecolor{gray6}{RGB}{242,242,242}
+
+% ====== CAPTION STYLE ======
+\captionsetup[longtable]{labelfont=bf, font=small, 
+  singlelinecheck=false, 
+  skip=0pt}
+
+% ====== BEGIN DOCUMENT ======
+\begin{document}
+
+
+\begin{center}
+\Large\bfseries
+Regression Results by Outcome and Model
+\end{center}
+\vspace{1em}
+
+
+\rowcolors{2}{gray6}{white}
+\begin{table}[htbp]\scriptsize
+\centering
+\caption{TWFE OLS Coefficients for Mean Intensity, Cooperation, and Conflict}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{
+    l
+    >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+    >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+}
+\toprule
+\rowcolor{gray!20}
+ & \multicolumn{3}{c}{\textbf{Mean}} 
+ & \multicolumn{3}{c}{\textbf{Cooperation}} 
+ & \multicolumn{3}{c}{\textbf{Conflict}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+ & Distance & Entropy & TWS & Distance & Entropy & TWS & Distance & Entropy & TWS \\
+\midrule
+Distance & $0.022^{}$ (0.018) & -- & -- & $-0.000^{}$ (0.011) & -- & -- & $-0.046^{}$ (0.036) & -- & -- \\
+Entropy & -- & $-0.081^{.}$ (0.042) & -- & -- & $-0.016^{}$ (0.024) & -- & -- & $0.076^{}$ (0.081) & -- \\
+TWS & -- & -- & $0.029^{*}$ (0.011) & -- & -- & $0.025^{***}$ (0.007) & -- & -- & $0.063^{**}$ (0.025) \\
+Salience & $0.115^{}$ (0.167) & $0.074^{}$ (0.166) & $0.131^{}$ (0.165) & $0.153^{*}$ (0.072) & $0.102^{}$ (0.072) & $0.140^{*}$ (0.070) & $0.314^{}$ (0.244) & $0.316^{}$ (0.244) & $0.243^{}$ (0.240) \\
+Symmetry & $0.001^{}$ (0.044) & $0.026^{}$ (0.044) & $0.002^{}$ (0.044) & $0.056^{.}$ (0.031) & $0.068^{*}$ (0.031) & $0.057^{.}$ (0.031) & $-0.055^{}$ (0.072) & $-0.055^{}$ (0.074) & $-0.049^{}$ (0.072) \\
+Regime Difference & $-0.744^{***}$ (0.138) & $-0.694^{***}$ (0.138) & $-0.746^{***}$ (0.138) & $-0.033^{}$ (0.087) & $-0.005^{}$ (0.087) & $-0.036^{}$ (0.087) & $0.018^{}$ (0.182) & $-0.002^{}$ (0.183) & $0.011^{}$ (0.182) \\
+Relative GDP & $0.182^{***}$ (0.050) & $0.196^{***}$ (0.050) & $0.145^{**}$ (0.051) & $0.253^{***}$ (0.019) & $0.254^{***}$ (0.020) & $0.229^{***}$ (0.020) & $0.930^{***}$ (0.096) & $0.916^{***}$ (0.097) & $0.876^{***}$ (0.097) \\
+Relative CINC & $-0.203^{***}$ (0.045) & $-0.221^{***}$ (0.046) & $-0.180^{***}$ (0.045) & $-0.171^{***}$ (0.018) & $-0.172^{***}$ (0.019) & $-0.157^{***}$ (0.018) & $-0.561^{***}$ (0.085) & $-0.561^{***}$ (0.086) & $-0.533^{***}$ (0.086) \\
+Relative SIPRI & $0.159^{**}$ (0.050) & $0.166^{**}$ (0.051) & $0.156^{**}$ (0.050) & $0.026^{}$ (0.018) & $0.020^{}$ (0.020) & $0.025^{}$ (0.018) & $-0.346^{***}$ (0.100) & $-0.326^{**}$ (0.102) & $-0.340^{***}$ (0.100) \\
+UN Distance Score & $-0.082^{*}$ (0.039) & $-0.085^{*}$ (0.039) & $-0.082^{*}$ (0.039) & $-0.019^{}$ (0.026) & $-0.019^{}$ (0.026) & $-0.019^{}$ (0.026) & $0.127^{**}$ (0.049) & $0.126^{*}$ (0.049) & $0.129^{**}$ (0.049) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item[] \textit{Notes:} Standard errors in parentheses. $^{.} p<0.1$, $^{*} p<0.05$, $^{**} p<0.01$, $^{***} p<0.001$.
+\end{tablenotes}
+\end{table}
+
+
+\rowcolors{2}{gray6}{white}
+\begin{table}[htbp]\scriptsize
+\centering
+\caption{TWFE OLS Coefficients for Diplomatic Intensity: Mean, Cooperation, and Conflict}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{
+  l
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+}
+\toprule
+\rowcolor{gray!20}
+ & \multicolumn{3}{c}{\textbf{Mean}} 
+ & \multicolumn{3}{c}{\textbf{Cooperation}} 
+ & \multicolumn{3}{c}{\textbf{Conflict}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+ & Distance & Entropy & TWS & Distance & Entropy & TWS & Distance & Entropy & TWS \\
+\midrule
+Distance & $0.049^{**}$ (0.016) & -- & -- & $0.010^{}$ (0.010) & -- & -- & $0.039^{}$ (0.026) & -- & -- \\
+Entropy & -- & $-0.110^{**}$ (0.035) & -- & -- & $-0.027^{}$ (0.022) & -- & -- & $-0.129^{*}$ (0.059) & -- \\
+TWS & -- & -- & $0.009^{}$ (0.009) & -- & -- & $0.012^{.}$ (0.006) & -- & -- & $0.028^{.}$ (0.017) \\
+Salience & $0.248^{.}$ (0.132) & $0.234^{.}$ (0.133) & $0.310^{*}$ (0.129) & $0.108^{.}$ (0.065) & $0.068^{}$ (0.065) & $0.115^{.}$ (0.064) & $0.482^{*}$ (0.188) & $0.486^{*}$ (0.189) & $0.508^{**}$ (0.184) \\
+Symmetry & $0.059^{}$ (0.038) & $0.069^{.}$ (0.038) & $0.059^{}$ (0.038) & $0.066^{*}$ (0.030) & $0.074^{*}$ (0.031) & $0.066^{*}$ (0.030) & $-0.023^{}$ (0.046) & $-0.024^{}$ (0.047) & $-0.021^{}$ (0.046) \\
+Regime Difference & $-0.458^{***}$ (0.112) & $-0.426^{***}$ (0.113) & $-0.460^{***}$ (0.112) & $-0.049^{}$ (0.084) & $-0.036^{}$ (0.085) & $-0.050^{}$ (0.084) & $0.231^{.}$ (0.118) & $0.244^{*}$ (0.119) & $0.227^{.}$ (0.118) \\
+Relative GDP & $-0.140^{***}$ (0.038) & $-0.122^{**}$ (0.040) & $-0.165^{***}$ (0.039) & $0.118^{***}$ (0.016) & $0.116^{***}$ (0.017) & $0.103^{***}$ (0.017) & $0.152^{*}$ (0.069) & $0.164^{*}$ (0.070) & $0.112^{}$ (0.071) \\
+Relative CINC & $0.036^{}$ (0.036) & $0.026^{}$ (0.038) & $0.055^{}$ (0.037) & $-0.079^{***}$ (0.015) & $-0.078^{***}$ (0.016) & $-0.069^{***}$ (0.015) & $-0.116^{.}$ (0.063) & $-0.124^{.}$ (0.064) & $-0.087^{}$ (0.064) \\
+Relative SIPRI & $0.154^{***}$ (0.037) & $0.147^{***}$ (0.039) & $0.148^{***}$ (0.037) & $-0.014^{}$ (0.016) & $-0.019^{}$ (0.017) & $-0.016^{}$ (0.016) & $-0.064^{}$ (0.067) & $-0.057^{}$ (0.069) & $-0.070^{}$ (0.067) \\
+UN Distance Score & $-0.082^{*}$ (0.033) & $-0.087^{**}$ (0.033) & $-0.082^{*}$ (0.032) & $-0.018^{}$ (0.025) & $-0.016^{}$ (0.025) & $-0.018^{}$ (0.025) & $0.050^{}$ (0.035) & $0.048^{}$ (0.035) & $0.050^{}$ (0.035) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item[] \textit{Notes:} Standard errors in parentheses. $^{.} p<0.1$, $^{*} p<0.05$, $^{**} p<0.01$, $^{***} p<0.001$.}
+\end{tablenotes}
+\end{table}
+
+
+\rowcolors{2}{gray6}{white}
+\begin{table}[htbp]\scriptsize
+\centering
+\caption{TWFE OLS Coefficients for Armed Intensity: Mean, Cooperation, and Conflict}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{
+  l
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+}
+\toprule
+\rowcolor{gray!20}
+ & \multicolumn{3}{c}{\textbf{Mean}} 
+ & \multicolumn{3}{c}{\textbf{Cooperation}} 
+ & \multicolumn{3}{c}{\textbf{Conflict}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+ & Distance & Entropy & TWS & Distance & Entropy & TWS & Distance & Entropy & TWS \\
+\midrule
+Distance & $-0.427^{*}$ (0.189) & -- & -- & $0.062^{}$ (0.050) & -- & -- & $0.048^{}$ (0.030) & -- & -- \\
+Entropy & -- & $0.779^{.}$ (0.453) & -- & -- & $-0.166^{}$ (0.114) & -- & -- & $-0.076^{}$ (0.068) & -- \\
+TWS & -- & -- & $0.117^{}$ (0.103) & -- & -- & $-0.020^{}$ (0.031) & -- & -- & $-0.023^{}$ (0.020) \\
+Salience & $1.819^{.}$ (1.009) & $1.526^{}$ (1.023) & $1.424^{}$ (1.015) & $0.250^{}$ (0.461) & $0.328^{}$ (0.463) & $0.297^{}$ (0.453) & $0.263^{}$ (0.191) & $0.222^{}$ (0.194) & $0.308^{.}$ (0.186) \\
+Symmetry & $-0.749^{*}$ (0.357) & $-0.591^{}$ (0.368) & $-0.730^{*}$ (0.358) & $-0.155^{}$ (0.109) & $-0.173^{}$ (0.113) & $-0.156^{}$ (0.109) & $0.014^{}$ (0.058) & $0.024^{}$ (0.060) & $0.010^{}$ (0.058) \\
+Regime Difference & $-2.286^{*}$ (0.923) & $-2.315^{*}$ (0.933) & $-2.342^{*}$ (0.921) & $0.064^{}$ (0.291) & $0.076^{}$ (0.293) & $0.078^{}$ (0.290) & $0.168^{}$ (0.154) & $0.176^{}$ (0.156) & $0.174^{}$ (0.154) \\
+Relative GDP & $3.238^{***}$ (0.445) & $3.074^{***}$ (0.452) & $3.231^{***}$ (0.450) & $-0.328^{*}$ (0.129) & $-0.293^{*}$ (0.132) & $-0.334^{*}$ (0.133) & $0.320^{***}$ (0.077) & $0.284^{***}$ (0.079) & $0.333^{***}$ (0.079) \\
+Relative CINC & $-1.566^{***}$ (0.383) & $-1.501^{***}$ (0.388) & $-1.594^{***}$ (0.385) & $-0.103^{}$ (0.100) & $-0.118^{}$ (0.099) & $-0.093^{}$ (0.100) & $0.014^{}$ (0.063) & $0.051^{}$ (0.062) & $0.009^{}$ (0.063) \\
+Relative SIPRI & $-0.807^{.}$ (0.445) & $-0.793^{.}$ (0.456) & $-0.770^{.}$ (0.442) & $0.400^{***}$ (0.115) & $0.412^{***}$ (0.116) & $0.398^{***}$ (0.115) & $-0.190^{**}$ (0.073) & $-0.200^{**}$ (0.074) & $-0.195^{**}$ (0.073) \\
+UN Distance Score & $-0.283^{}$ (0.273) & $-0.234^{}$ (0.276) & $-0.279^{}$ (0.273) & $0.038^{}$ (0.090) & $0.036^{}$ (0.091) & $0.038^{}$ (0.090) & $0.037^{}$ (0.041) & $0.044^{}$ (0.042) & $0.037^{}$ (0.041) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item[] \textit{Notes:} Standard errors in parentheses. $^{.} p<0.1$, $^{*} p<0.05$, $^{**} p<0.01$, $^{***} p<0.001$.}
+\end{tablenotes}
+\end{table}
+
+\rowcolors{2}{gray6}{white}
+\begin{table}[htbp]\scriptsize
+\centering
+\caption{TWFE OLS Coefficients for Economic Intensity: Mean, Cooperation, and Conflict}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{
+  l
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X
+}
+\toprule
+\rowcolor{gray!20}
+ & \multicolumn{3}{c}{\textbf{Mean}} 
+ & \multicolumn{3}{c}{\textbf{Cooperation}} 
+ & \multicolumn{3}{c}{\textbf{Conflict}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10}
+ & Distance & Entropy & TWS & Distance & Entropy & TWS & Distance & Entropy & TWS \\
+\midrule
+Distance & $-0.034^{}$ (0.120) & -- & -- & $-0.093^{**}$ (0.034) & -- & -- & $0.334^{*}$ (0.146) & -- & -- \\
+Entropy & -- & $0.090^{}$ (0.284) & -- & -- & $0.198^{*}$ (0.080) & -- & -- & $-0.891^{**}$ (0.315) & -- \\
+TWS & -- & -- & $0.176^{*}$ (0.078) & -- & -- & $0.086^{***}$ (0.022) & -- & -- & $-0.017^{}$ (0.135) \\
+Salience & $0.082^{}$ (0.756) & $0.134^{}$ (0.756) & $-0.039^{}$ (0.729) & $0.235^{}$ (0.194) & $0.200^{}$ (0.192) & $0.112^{}$ (0.194) & $-2.261^{**}$ (0.790) & $-2.287^{**}$ (0.791) & $-1.984^{*}$ (0.833) \\
+Symmetry & $0.050^{}$ (0.209) & $0.074^{}$ (0.211) & $0.063^{}$ (0.209) & $-0.072^{}$ (0.058) & $-0.072^{}$ (0.058) & $-0.067^{}$ (0.057) & $0.124^{}$ (0.236) & $0.067^{}$ (0.239) & $0.080^{}$ (0.234) \\
+Regime Difference & $-2.772^{***}$ (0.525) & $-2.790^{***}$ (0.528) & $-2.790^{***}$ (0.524) & $-0.186^{}$ (0.133) & $-0.180^{}$ (0.133) & $-0.196^{}$ (0.132) & $0.158^{}$ (0.636) & $0.146^{}$ (0.636) & $0.154^{}$ (0.634) \\
+Relative GDP & $0.657^{*}$ (0.302) & $0.653^{*}$ (0.302) & $0.479^{}$ (0.298) & $0.888^{***}$ (0.081) & $0.888^{***}$ (0.082) & $0.835^{***}$ (0.084) & $-0.841^{*}$ (0.369) & $-0.801^{*}$ (0.371) & $-0.932^{*}$ (0.416) \\
+Relative CINC & $-0.674^{**}$ (0.257) & $-0.703^{**}$ (0.259) & $-0.578^{*}$ (0.260) & $-0.517^{***}$ (0.071) & $-0.517^{***}$ (0.071) & $-0.493^{***}$ (0.072) & $0.435^{}$ (0.334) & $0.469^{}$ (0.335) & $0.559^{.}$ (0.330) \\
+Relative SIPRI & $0.760^{**}$ (0.285) & $0.796^{**}$ (0.287) & $0.766^{**}$ (0.285) & $0.107^{}$ (0.073) & $0.093^{}$ (0.075) & $0.111^{}$ (0.073) & $-0.331^{}$ (0.351) & $-0.349^{}$ (0.355) & $-0.355^{}$ (0.353) \\
+UN Distance Score & $-0.255^{}$ (0.161) & $-0.250^{}$ (0.163) & $-0.253^{}$ (0.162) & $0.026^{}$ (0.041) & $0.031^{}$ (0.041) & $0.026^{}$ (0.041) & $0.135^{}$ (0.177) & $0.128^{}$ (0.179) & $0.125^{}$ (0.178) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item[] \textit{Notes:} Standard errors in parentheses. $^{.} p<0.1$, $^{*} p<0.05$, $^{**} p<0.01$, $^{***} p<0.001$.}
+\end{tablenotes}
+\end{table}
+
+\rowcolors{2}{gray6}{white}
+\begin{table}[htbp]
+\scriptsize
+\centering
+\caption{Regression Results: Trade Variables Lagged and Lead by 1 Year}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{l
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X
+  >{\centering\arraybackslash}X}
+\toprule
+\rowcolor{gray!20}
+& \multicolumn{3}{c}{Lagged (t$-$1)} & \multicolumn{3}{c}{Lead (t$+$1)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Variable & Distance & Entropy & TWS & Distance & Entropy & TWS \\
+\midrule
+Distance                & $-0.017^{}$ (0.018) & NA                  & NA                  & $0.004^{}$ (0.018)  & NA                  & NA                  \\
+Entropy                 & NA                  & $-0.003^{}$ (0.041) & NA                  & NA                  & $-0.033^{}$ (0.039) & NA                  \\
+Theory-weighted Share   & NA                  & NA                  & $-0.027^{*}$ (0.011) & NA                  & NA                  & $-0.039^{***}$ (0.011) \\
+Salience                & $0.103^{}$ (0.169)  & $0.091^{}$ (0.168)  & $0.115^{}$ (0.168)  & $0.149^{}$ (0.166)  & $0.145^{}$ (0.164)  & $0.141^{}$ (0.164)  \\
+Symmetry                & $-0.003^{}$ (0.044) & $-0.000^{}$ (0.045) & $-0.004^{}$ (0.044) & $0.002^{}$ (0.044)  & $0.017^{}$ (0.045)  & $-0.001^{}$ (0.044) \\
+Regime Diff. (Polyarchy)& $-0.702^{***}$ (0.140) & $-0.687^{***}$ (0.141) & $-0.696^{***}$ (0.140) & $-0.740^{***}$ (0.138) & $-0.730^{***}$ (0.138) & $-0.733^{***}$ (0.138) \\
+UN Distance Score       & $-0.070^{.}$ (0.039) & $-0.072^{.}$ (0.039) & $-0.070^{.}$ (0.039) & $-0.084^{*}$ (0.038) & $-0.081^{*}$ (0.039) & $-0.084^{*}$ (0.038) \\
+Relative GDP            & $0.184^{***}$ (0.050) & $0.170^{***}$ (0.050) & $0.156^{**}$ (0.051) & $0.175^{***}$ (0.049) & $0.168^{***}$ (0.050) & $0.143^{**}$ (0.050) \\
+Relative CINC           & $-0.211^{***}$ (0.046) & $-0.199^{***}$ (0.047) & $-0.193^{***}$ (0.046) & $-0.196^{***}$ (0.045) & $-0.210^{***}$ (0.046) & $-0.177^{***}$ (0.045) \\
+Relative SIPRI          & $0.159^{**}$ (0.050) & $0.154^{**}$ (0.050) & $0.157^{**}$ (0.050) & $0.154^{**}$ (0.050) & $0.169^{***}$ (0.050) & $0.154^{**}$ (0.050) \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item[] \textit{Notes:} Standard errors in parentheses. TWS = Theory-weighted Share. $^{*} p<0.05$, $^{**} p<0.01$, $^{***} p<0.001$, $^{.} p<0.1$.
+\end{tablenotes}
+\end{table}
+
+\rowcolors{2}{gray!10}{white}
+\begin{table}[htbp]
+\scriptsize
+\centering
+\caption{Descriptive Statistics for Regression Variables}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{lXrrrrr}
+\toprule
+\rowcolor{gray!20}
+Group & Variable & \textbf{N} & \textbf{Mean} & \textbf{SD} & \textbf{Min} & \textbf{Max} \\
+\midrule
+Dependent Variables
+ & Overall Mean & 170598 & 1.978 & 2.366 & -10 & 10 \\
+ & Overall Mean: Cooperation & 157791 & 3.194 & 1.392 & 0.4 & 10 \\
+ & Overall Mean: Conflict & 64769 & -4.63 & 2.194 & -10 & -0.1 \\
+ & Diplomatic Mean & 167374 & 2.123 & 1.948 & -9.5 & 9 \\
+ & Diplomatic Mean: Cooperation & 155515 & 3.057 & 1.308 & 0.4 & 9 \\
+ & Diplomatic Mean: Conflict & 56985 & -3.515 & 1.362 & -9.5 & -0.1 \\
+ & Armed Mean & 26865 & -4.22 & 6.871 & -10 & 10 \\
+ & Armed Mean: Cooperation & 11493 & 7.352 & 1.353 & 3.4 & 10 \\
+ & Armed Mean: Conflict & 21264 & -9.075 & 0.974 & -10 & -4 \\
+ & Economic Mean: Intensity & 30219 & 4.316 & 4.11 & -9.2 & 7.4 \\
+ & Economic Mean: Intensity: Cooperation & 27712 & 6.034 & 1.023 & 3.4 & 7.4 \\
+ & Economic Mean: Intensity: Conflict & 6243 & -6.937 & 1.943 & -9.2 & -0.3 \\
+Independent Variables
+ & Distance & 389630 & 1.564 & 0.479 & 0.028 & 2.887 \\
+ & Entropy & 338387 & 0.542 & 0.239 & 0 & 1 \\
+ & Theory-weighted Share & 389630 & -0.007 & 0.979 & -3.855 & 2.108 \\
+ & Salience & 389630 & 0.009 & 0.038 & 0 & 0.992 \\
+ & Symmetry & 389630 & 0.284 & 0.302 & 0 & 1 \\
+Controls
+ & Both NATO & 386295 & 0.012 & 0.11 & 0 & 1 \\
+ & Both WTO & 386295 & 0.261 & 0.439 & 0 & 1 \\
+ & Regime Diff. (Polyarchy) & 354115 & 0.308 & 0.223 & 0 & 0.909 \\
+ & Relative CINC & 311250 & 0.55 & 0.362 & 0 & 1 \\
+ & Relative GDP & 381573 & 0.567 & 0.379 & 0 & 1 \\
+ & Relative SIPRI & 310938 & 0.542 & 0.389 & 0 & 1 \\
+ & UN Distance Score & 383765 & 1.019 & 0.788 & 0 & 4.818 \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item[] \textit{Notes:} Variables shown are used in regression specifications below.
+\end{tablenotes}
+\end{table}
+
+
+  
+% \end{landscape}
+
+% ====== END DOCUMENT ======
+\end{document}
